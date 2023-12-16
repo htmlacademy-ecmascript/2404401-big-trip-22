@@ -10,4 +10,5 @@ const tripPresenter = new TripPresenter({
   tripContainer: eventsContainer
 });
 
+
 tripPresenter.init();
