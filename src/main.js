@@ -1,14 +1,20 @@
-import TripPresenter from './presenter/trip-presenter.js';
+import BoardPresenter from './presenter/trip-presenter.js';
+import TripModel from './model/trip-model.js';
 
-const filtersContainer = document.querySelector('.trip-controls__filters');
-const eventsContainer = document.querySelector('.trip-events');
-const mainContainer = document.querySelector('.trip-main');
+const sortElement = document.querySelector('.trip-events');
+const infoElement = document.querySelector('.trip-main');
+const filterElement = document.querySelector('.trip-controls__filters');
 
-const tripPresenter = new TripPresenter({
-  mainContainer: mainContainer,
-  filterContainer: filtersContainer,
-  tripContainer: eventsContainer
+const tripModel = new TripModel();
+tripModel.init();
+
+
+const boardPresenter = new BoardPresenter({
+  routeContainer: infoElement,
+  sortContainer: sortElement,
+  filterContainer: filterElement,
+  listContainer: sortElement,
+  tripModel: tripModel,
 });
 
-
-tripPresenter.init();
+boardPresenter.init();
