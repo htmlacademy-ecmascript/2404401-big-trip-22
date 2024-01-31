@@ -4,7 +4,7 @@ import InfoView from '../view/info-view.js';
 import FiltersView from '../view/filters-view.js';
 import SortView from '../view/sort-view.js';
 import EventsList from '../view/event-list-view.js';
-import PointView from '../view/pint-view.js';
+import PointView from '../view/point-view.js';
 import EditPointView from '../view/edit-point-view.js';
 import AddNewPointView from '../view/new-point-view.js';
 
